@@ -33,6 +33,8 @@
         <li>{{ $t('If none of these worked, lower your bitrate') }}</li>
       </ul>
 
+      <GenericFormGroups v-model="streamingSettings" @input="saveStreamingSettings" />
+      <GenericFormGroups v-model="outputSettings" @input="saveOutputSettings" />
     </div>
 
 
@@ -99,14 +101,14 @@
 <script lang="ts" src="./Troubleshooter.vue.ts"></script>
 
 <style lang="less" scoped>
-  @import "../../styles/index";
+@import '../../styles/index';
 
-  .fa-warning {
-    color: @red;
-  }
+.fa-warning {
+  color: @red;
+}
 
-  p, ul {
-    margin-bottom: 15px;
-  }
-
+p,
+ul {
+  margin-bottom: 15px;
+}
 </style>
